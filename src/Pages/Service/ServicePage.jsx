@@ -1,5 +1,5 @@
-import React from "react";
-import { Typography } from "@mui/material";
+import React from 'react';
+import { Typography } from '@mui/material';
 
 const ServicePage = () => {
 
@@ -10,4 +10,4 @@ const ServicePage = () => {
   );
 };
 
-export default ServicePage
+export default ServicePage;

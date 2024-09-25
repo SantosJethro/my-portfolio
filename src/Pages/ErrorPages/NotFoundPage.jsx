@@ -1,5 +1,5 @@
-import React from "react";
-import { Typography } from "@mui/material";
+import React from 'react';
+import { Typography } from '@mui/material';
 
 const NotFoundPage = () => {
 
@@ -10,4 +10,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage
+export default NotFoundPage;

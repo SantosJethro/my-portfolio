@@ -1,5 +1,5 @@
-import React from "react";
-import { Typography } from "@mui/material";
+import React from 'react';
+import { Typography } from '@mui/material';
 
 const ContactPage = () => {
 
@@ -10,4 +10,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage
+export default ContactPage;

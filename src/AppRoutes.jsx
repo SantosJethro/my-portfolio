@@ -1,6 +1,6 @@
-import { Fragment, Suspense, lazy } from 'react'
+import React, { Fragment, Suspense, lazy } from 'react';
 import { Typography } from '@mui/material';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 
 const AboutPage = lazy(() => import('./Pages/About/AboutPage'));
 const NotFoundPage = lazy(() => import('./Pages/ErrorPages/NotFoundPage'));
@@ -61,7 +61,7 @@ const AppRoutes = () => {
         </Routes>
       </Suspense>
     </Fragment >
-  )
-}
+  );
+};
 
 export default AppRoutes;
