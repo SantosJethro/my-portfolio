@@ -1,11 +1,12 @@
 import React from "react";
+import { Typography } from "@mui/material";
 
 const NotFoundPage = () => {
 
   return (
-    <h1>
+    <Typography>
       Page Cant Be Found
-    </h1>
+    </Typography>
   );
 };
 

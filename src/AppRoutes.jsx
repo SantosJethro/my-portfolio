@@ -1,12 +1,14 @@
-import { Fragment, Suspense } from 'react'
+import { Fragment, Suspense, lazy } from 'react'
+import { Typography } from '@mui/material';
 import { Route, Routes } from 'react-router-dom'
-import AboutPage from './Pages/About/AboutPage'
-import NotFoundPage from './Pages/ErrorPages/NotFoundPage'
-import ContactPage from './Pages/Contact/ContactPage';
-import HomePage from './Pages/Home/HomePage';
-import ProjectPage from './Pages/Project/ProjectPage';
-import ServicePage from './Pages/Service/ServicePage';
-import SkillsPage from './Pages/Skills/Skills';
+
+const AboutPage = lazy(() => import('./Pages/About/AboutPage'));
+const NotFoundPage = lazy(() => import('./Pages/ErrorPages/NotFoundPage'));
+const ContactPage = lazy(() => import('./Pages/Contact/ContactPage'));
+const HomePage = lazy(() => import('./Pages/Home/HomePage'));
+const ProjectPage = lazy(() => import('./Pages/Project/ProjectPage'));
+const ServicePage = lazy(() => import('./Pages/Service/ServicePage'));
+const SkillsPage = lazy(() => import('./Pages/Skills/Skills'));
 
 const PAGE_LIST = [
   {
@@ -44,7 +46,7 @@ const PAGE_LIST = [
 const AppRoutes = () => {
   return (
     <Fragment>
-      <Suspense fallback={<h1>loading</h1>}>
+      <Suspense fallback={<Typography>loading</Typography>}>
         <Routes>
           <Route>
             {
