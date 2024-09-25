@@ -1,5 +1,5 @@
-import React from "react";
-import { Typography } from "@mui/material";
+import React from 'react';
+import { Typography } from '@mui/material';
 
 const SkillsPage = () => {
 
@@ -10,4 +10,4 @@ const SkillsPage = () => {
   );
 };
 
-export default SkillsPage
+export default SkillsPage;
