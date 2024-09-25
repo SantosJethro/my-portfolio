@@ -1,6 +1,7 @@
 import React, { Fragment, Suspense, lazy } from 'react';
 import { Typography } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
+import BaseLayout from './Components/Layouts/BaseLayout';
 
 const AboutPage = lazy(() => import('./Pages/About/AboutPage'));
 const NotFoundPage = lazy(() => import('./Pages/ErrorPages/NotFoundPage'));
@@ -10,7 +11,7 @@ const ProjectPage = lazy(() => import('./Pages/Project/ProjectPage'));
 const ServicePage = lazy(() => import('./Pages/Service/ServicePage'));
 const SkillsPage = lazy(() => import('./Pages/Skills/Skills'));
 
-const PAGE_LIST = [
+export const PAGE_LIST = [
   {
     title: 'Home Page',
     component: <HomePage />,
@@ -24,12 +25,12 @@ const PAGE_LIST = [
   {
     title: 'Service Page',
     component: <ServicePage />,
-    path: '/about',
+    path: '/service',
   },
   {
     title: 'Skills Page',
     component: <SkillsPage />,
-    path: '/about',
+    path: '/skills',
   },
   {
     title: 'Project Page',
@@ -48,7 +49,7 @@ const AppRoutes = () => {
     <Fragment>
       <Suspense fallback={<Typography>loading</Typography>}>
         <Routes>
-          <Route>
+          <Route element={<BaseLayout />}>
             {
               PAGE_LIST.map((page, idx) => <Route
                 key={`${page.key}-${idx}`}
