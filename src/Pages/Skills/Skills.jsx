@@ -1,11 +1,12 @@
 import React from "react";
+import { Typography } from "@mui/material";
 
 const SkillsPage = () => {
 
   return (
-    <h1>
+    <Typography>
       Skills Page
-    </h1>
+    </Typography>
   );
 };
 

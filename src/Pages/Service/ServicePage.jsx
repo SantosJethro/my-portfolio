@@ -1,11 +1,12 @@
 import React from "react";
+import { Typography } from "@mui/material";
 
 const ServicePage = () => {
 
   return (
-    <h1>
+    <Typography>
       Service Page
-    </h1>
+    </Typography>
   );
 };
 
