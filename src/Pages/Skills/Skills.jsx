@@ -126,7 +126,7 @@ const MY_SKILLS = [
     title: 'Babel',
     value: 90,
     category: DEVELOPMENT_TOOLS,
-    icon: <SiBabel />
+    icon: <SiBabel size={iconSize}/>
   },
   {
     title: 'Sequilize.js',
@@ -304,7 +304,6 @@ const SkillsPage = () => {
   const [visibleSkills, setVisibleSkills] = useState([WEB_DEVELOPMENT, PROGRAMMING_LANGUAGES, DEVELOPMENT_TOOLS, DATABASES, DEVOPS]);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const bottomRef = useRef(null);
-  const topRef = useRef(null);
 
   const getUniqueCategories = () => {
     setSkillCategory([...new Set(MY_SKILLS.map(skill => skill.category))]);
