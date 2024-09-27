@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Box, Stack } from '@mui/material';
 
-const RightPanelHome = () => {
+const LeftPanelAbout = () => {
 
   return (
     <Fragment>
@@ -20,4 +20,4 @@ const RightPanelHome = () => {
   );
 };
 
-export default RightPanelHome;
+export default LeftPanelAbout;
