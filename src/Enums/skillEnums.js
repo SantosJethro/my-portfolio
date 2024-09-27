@@ -1,0 +1,15 @@
+export const WEB_DEVELOPMENT = 'Web Development';
+export const PROGRAMMING_LANGUAGES = 'Programming Languages';
+export const DEVELOPMENT_TOOLS = 'Development Tools';
+export const DATABASES = 'Databases';
+export const IT_SUPPORT = 'IT Support';
+export const PROJECT_MANAGEMENT = 'Project Management';
+export const MULTIMEDIA = 'Multimedia';
+export const SOFT_SKILLS = 'Soft Skills';
+export const MOBILE_DEVELOPMENT = 'Mobile Development';
+export const VERSION_CONTROL = 'Version Control';
+export const FRONTEND_LIBRARIES = 'Frontend Libraries';
+export const STATE_MANAGEMENT_LIBRARIES = 'State Management Libraries';
+export const SECURITY = 'Security';
+export const OPERATING_SYSTEMS = 'Operating Systems';
+export const DEVOPS = 'DevOps';
