@@ -11,6 +11,9 @@ export const dark = createTheme(({
     secondary: {
       main: '#eebbc3',
     },
+    grey: {
+      main: '#848884',
+    },
     icon: {
       main: '#a9a9a9'
     },

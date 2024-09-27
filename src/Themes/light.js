@@ -10,6 +10,9 @@ export const light = createTheme(({
     secondary: {
       main: '#be1931',
     },
+    grey: {
+      main: '#848884',
+    },
     icon: {
       main: '#001858'
     },
