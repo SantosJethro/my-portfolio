@@ -5,7 +5,7 @@ import BaseLayout from './Components/Layouts/BaseLayout';
 
 const AboutPage = lazy(() => import('./Pages/About/AboutPage'));
 const NotFoundPage = lazy(() => import('./Pages/ErrorPages/NotFoundPage'));
-const ContactPage = lazy(() => import('./Pages/Contact/ContactPage'));
+// const ContactPage = lazy(() => import('./Pages/Contact/ContactPage'));
 const HomePage = lazy(() => import('./Pages/Home/HomePage'));
 const ProjectPage = lazy(() => import('./Pages/Project/ProjectPage'));
 const ServicePage = lazy(() => import('./Pages/Service/ServicePage'));
@@ -37,11 +37,11 @@ export const PAGE_LIST = [
     component: <ProjectPage />,
     path: '/project',
   },
-  {
-    title: 'Contact Page',
-    component: <ContactPage />,
-    path: '/contact',
-  },
+  // {
+  //   title: 'Contact Page',
+  //   component: <ContactPage />,
+  //   path: '/contact',
+  // },
 ];
 
 const AppRoutes = () => {
