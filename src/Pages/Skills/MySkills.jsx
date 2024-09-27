@@ -1,12 +1,15 @@
 import React from 'react';
-import { Box, Grid2 as Grid, LinearProgress, Typography } from '@mui/material';
+import { Box, Grid2 as Grid, LinearProgress, Stack, Typography } from '@mui/material';
 
-const MySkills = ({ skill, skillLevel }) => {
+const MySkills = ({ skill, skillLevel, icon }) => {
 
   return (
     <Grid container item size={12} spacing={1} alignItems={'center'}>
       <Grid item size={6}>
-        <Typography variant='h6'>{`${skill}`}</Typography>
+        <Stack spacing={2} direction={'row'}>
+          {icon}
+          <Typography variant='h6'>{`${skill}`}</Typography>
+        </Stack>
       </Grid>
       <Grid size={12}>
         <Box position="relative">
@@ -18,7 +21,7 @@ const MySkills = ({ skill, skillLevel }) => {
           >
             <Typography variant='h6'>{`${skillLevel}%`}</Typography>
           </Box>
-          <LinearProgress variant="determinate" value={skillLevel} sx={{height: '10px' ,}}/>
+          <LinearProgress variant="determinate" value={skillLevel} sx={{ height: '10px', }} />
         </Box>
       </Grid>
     </Grid>
