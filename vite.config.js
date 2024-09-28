@@ -4,34 +4,30 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 const manifestForPlugIn = {
   registerType: 'prompt',
-  includeAssests: ['favicon.ico', 'apple-touc-icon.png', 'masked-icon.svg'],
+  includeAssests: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.png','android-chrome-192x192.png','android-chrome-512x512.png','maskable_icon_x512.png'],
   manifest: {
-    name: 'React-vite-app',
-    short_name: 'react-vite-app',
-    description: 'I am a simple vite app',
+    name: 'Jethro Portfolio',
+    short_name: 'Jethro Portfolio',
+    description: 'A developer focused on creating user-friendly applications. Explore my projects that showcase my skills in coding and design, all aimed at enhancing user experiences. Let’s bring your ideas to life!',
     icons: [{
       src: '/android-chrome-192x192.png',
       sizes: '192x192',
       type: 'image/png',
-      purpose: 'favicon'
     },
     {
       src: '/android-chrome-512x512.png',
       sizes: '512x512',
       type: 'image/png',
-      purpose: 'favicon'
     },
     {
       src: '/apple-touch-icon.png',
       sizes: '180x180',
       type: 'image/png',
-      purpose: 'apple touch icon',
     },
     {
-      src: '/maskable_icon.png',
+      src: '/maskable_icon_x512.png',
       sizes: '512x512',
       type: 'image/png',
-      purpose: 'any maskable',
     }
     ],
     theme_color: '#171717',
