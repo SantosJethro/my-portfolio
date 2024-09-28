@@ -8,7 +8,7 @@ import { PiBrowsers } from 'react-icons/pi';
 import { FaGithub, FaGitlab, FaNode, FaNpm } from 'react-icons/fa';
 import { TbBrandVinted, TbSql } from 'react-icons/tb';
 import { DiRedis } from 'react-icons/di';
-import ArrowUpwardOutlined from '@mui/icons-material/ArrowUpwardOutlined';
+import { ArrowDownwardOutlined, ArrowUpwardOutlined } from '@mui/icons-material';
 
 const iconSize = '30px';
 
@@ -126,7 +126,7 @@ const MY_SKILLS = [
     title: 'Babel',
     value: 90,
     category: DEVELOPMENT_TOOLS,
-    icon: <SiBabel size={iconSize}/>
+    icon: <SiBabel size={iconSize} />
   },
   {
     title: 'Sequilize.js',
@@ -365,7 +365,7 @@ const SkillsPage = () => {
           </Fragment>
         ))}
         <Grid size={12} container justifyContent={'center'} ref={bottomRef}>
-          <Button variant='outlined' size='large' onClick={() => showMore()} disabled={visibleSkills?.length == skillCategory?.length}>
+          <Button variant='outlined' size='large' onClick={() => showMore()} disabled={visibleSkills?.length == skillCategory?.length} endIcon={<ArrowDownwardOutlined />}>
             Show More
           </Button>
         </Grid>
