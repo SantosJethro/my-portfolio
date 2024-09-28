@@ -7,11 +7,23 @@ const AboutPage = () => {
 
   return (
     <Fragment>
-      <Grid container height={'100%'} spacing={2} width={'100%'} justifyContent={'space-between'}>
-        <Grid size={5}>
+      <Grid
+        container
+        height={'100%'}
+        spacing={2}
+        width={'100%'} 
+        justifyContent={'space-between'}
+        alignItems={'center'}
+        sx={(theme) => ({
+          [theme.breakpoints.down('tablet')]: {
+            flexDirection: 'column',
+          },
+        })}
+      >
+        <Grid size={{ tablet: 12, laptop: 5 }}>
           <LeftPanelAbout />
         </Grid>
-        <Grid size={6}>
+        <Grid size={{ tablet: 12, laptop: 6 }}>
           <RightPanelAbout />
         </Grid>
       </Grid>

@@ -5,14 +5,21 @@ const RightPanelHome = () => {
 
   return (
     <Fragment>
-      <Stack alignItems={'flex-end'}>
+      <Stack sx={(theme) => ({
+        [theme.breakpoints.down('tablet')]: {
+          alignItems: 'center',
+        },
+        [theme.breakpoints.up('laptop')]: {
+          alignItems: 'flex-end',
+        },
+      })}>
         <Box
           component={'img'}
           src={'/images/profile-pic.png'}
-          height={'83vh'}
-          width={'35vw'}
           sx={{
-            objectFit: 'cover'
+            objectFit: 'cover',
+            width: '50%',
+            height: '80%'
           }}
         />
       </Stack>

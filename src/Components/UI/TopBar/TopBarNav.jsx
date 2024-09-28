@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Stack, Tab, Tabs, } from '@mui/material';
 import { PAGE_LIST } from '../../../AppRoutes';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { findElement } from '../../../Helpers/arrayHelper';
 
 const TopBarNav = () => {
   const [value, setValue] = useState('/');
   const [title, setTitle] = useState('Portfolio');
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const handleChange = (event, path) => {
     setValue(path);
@@ -21,6 +22,12 @@ const TopBarNav = () => {
       document.title = 'Portfolio';
     };
   }, [title]);
+
+  useEffect(() => {
+    if (pathname != value) {
+      handleChange(null, pathname);
+    }
+  }, [pathname]);
 
   return (
     <Box>

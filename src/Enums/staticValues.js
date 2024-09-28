@@ -1,0 +1,1 @@
+export const MY_LINKEDIN_URL = 'https://www.linkedin.com/in/jethro-nathaniel-santos/';
