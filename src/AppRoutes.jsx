@@ -2,6 +2,7 @@ import React, { Fragment, Suspense, lazy } from 'react';
 import { Typography } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
 import BaseLayout from './Components/Layouts/BaseLayout';
+import { EngineeringOutlined, EngineeringRounded, FolderOutlined, FolderRounded, HandymanOutlined, HandymanRounded, HomeOutlined, HomeRounded, InfoOutlined, InfoRounded } from '@mui/icons-material';
 
 const AboutPage = lazy(() => import('./Pages/About/AboutPage'));
 const NotFoundPage = lazy(() => import('./Pages/ErrorPages/NotFoundPage'));
@@ -15,26 +16,36 @@ export const PAGE_LIST = [
   {
     title: 'Home Page',
     component: <HomePage />,
+    selectedIcon: <HomeRounded />,
+    icon: <HomeOutlined />,
     path: '/',
   },
   {
     title: 'About Page',
     component: <AboutPage />,
+    selectedIcon: <InfoRounded />,
+    icon: <InfoOutlined />,
     path: '/about',
   },
   {
     title: 'Service Page',
     component: <ServicePage />,
+    selectedIcon: <HandymanRounded />,
+    icon: <HandymanOutlined />,
     path: '/service',
   },
   {
     title: 'Skills Page',
     component: <SkillsPage />,
+    selectedIcon: <EngineeringRounded />,
+    icon: <EngineeringOutlined />,
     path: '/skills',
   },
   {
     title: 'Project Page',
     component: <ProjectPage />,
+    selectedIcon: <FolderRounded />,
+    icon: <FolderOutlined />,
     path: '/project',
   },
   // {

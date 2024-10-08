@@ -7,11 +7,15 @@ const HomePage = () => {
 
   return (
     <Fragment>
-      <Grid container height={'100%'}>
-        <Grid size={5}>
+      <Grid container height={'100%'} sx={(theme) => ({
+        [theme.breakpoints.down('tablet')]: {
+          flexDirection: 'column-reverse',
+        },
+      })}>
+        <Grid size={{ tablet: 12, laptop: 5 }}>
           <LeftPanelHome />
         </Grid>
-        <Grid size={7}>
+        <Grid size={{ tablet: 12, laptop: 7 }}>
           <RightPanelHome />
         </Grid>
       </Grid>

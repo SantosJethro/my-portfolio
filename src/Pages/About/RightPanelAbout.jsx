@@ -6,7 +6,7 @@ const MyDetails = ({ field, value }) => {
   return (
     <Fragment>
       <Grid container item size={12} spacing={1} alignItems={'center'}>
-        <Grid item size={2}>
+        <Grid item size={4}>
           <Typography variant="h5">{`${field}:`}</Typography>
         </Grid>
         <Grid item size={8}>
