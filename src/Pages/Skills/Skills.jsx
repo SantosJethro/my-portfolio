@@ -61,7 +61,7 @@ const MY_SKILLS = [
   },
   {
     title: 'Node.js',
-    value: 90,
+    value: 80,
     category: WEB_DEVELOPMENT,
     icon: <RiNodejsFill style={{ color: 'rgb(92, 150, 75)', }} size={iconSize} />
   },
