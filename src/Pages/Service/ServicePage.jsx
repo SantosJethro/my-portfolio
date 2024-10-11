@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography, Grid2 as Grid, } from '@mui/material';
 
 const services = [
   {
@@ -53,33 +53,39 @@ const ServicePage = () => {
 
   return (
     <Fragment>
-      {
-        services.map((service, idx) => {
-          return (
-            <Fragment key={idx}>
-              <Stack direction={'row'} alignItems={'center'} spacing={2}>
-                <Box
-                  component={'img'}
-                  src={service.img_src}
-                  sx={{
-                    objectFit: 'cover',
-                    width: '10%',
-                    height: '40%'
-                  }}
-                />
-                <Stack direction={'column'}>
-                  <Typography variant='h2'>
-                    {service.title}
-                  </Typography>
-                  <Typography >
-                    {service.description}
-                  </Typography>
-                </Stack>
-              </Stack>
-            </Fragment>
-          );
-        })
-      }
+      <Grid container justifyContent={'center'}>
+        {
+          services.map((service, idx) => {
+            return (
+              <Fragment key={idx}>
+                <Grid container direction={idx % 2 == 0 ? 'row' : 'row-reverse'} spacing={4} alignItems={'center'}>
+                  <Grid size={{ mobile: 5, tablet: 5, }}>
+                    <Stack alignItems={'center'}>
+                      <Box
+                        component={'img'}
+                        src={service.img_src}
+                        sx={{
+                          objectFit: 'cover',
+                          width: '30%',
+                          height: '90%'
+                        }}
+                      />
+                    </Stack>
+                  </Grid>
+                  <Grid size={{ mobile: 12, tablet: 12, laptop: 7 }}>
+                    <Typography variant='h3'>
+                      {service.title}
+                    </Typography>
+                    <Typography >
+                      {service.description}
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Fragment>
+            );
+          })
+        }
+      </Grid>
     </Fragment>
   );
 };

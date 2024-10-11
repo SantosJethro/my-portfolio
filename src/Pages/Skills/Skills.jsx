@@ -357,7 +357,7 @@ const SkillsPage = () => {
             </Grid>
             {
               MY_SKILLS?.filter((skill) => skill.category === category)?.map((skill, idxI) => (
-                <Grid size={{ mobile: 12,tablet: 12, laptop: 5 }} key={`${idxO}-${idxI}-${skill?.title}`}>
+                <Grid size={{ mobile: 12, tablet: 12, laptop: 5 }} key={`${idxO}-${idxI}-${skill?.title}`}>
                   <MySkills icon={skill?.icon} skill={skill?.title} skillLevel={skill?.value} />
                 </Grid>
               ))
