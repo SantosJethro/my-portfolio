@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
-import { Box, Stack, Typography, Grid2 as Grid, } from '@mui/material';
+import { Box, Stack, Typography, Grid2 as Grid, Card, } from '@mui/material';
 
 const services = [
   {
-    title: 'Laravel React Development',
+    title: 'Laravel/React Development',
     description: 'Full-stack web development combining Laravel’s robust backend with React’s dynamic frontend for high-performing, scalable web applications.',
     img_src: '/images/services/laravel-react.png'
   },
@@ -11,6 +11,11 @@ const services = [
     title: 'React Development',
     description: 'Modern and efficient frontend development using React to create interactive and responsive user interfaces.',
     img_src: '/images/services/react-dev.png'
+  },
+  {
+    title: 'Node Development Services',
+    description: 'Expert Node.js solutions for scalable apps, API integration, and real-time functionality. Unlock your project’s potential with us.',
+    img_src: '/images/services/node-development.png'
   },
   {
     title: 'WordPress Development',
@@ -53,12 +58,27 @@ const ServicePage = () => {
 
   return (
     <Fragment>
-      <Grid container justifyContent={'center'}>
+      <Grid container justifyContent={'center'} spacing={2} sx={{
+        backgroundImage: 'url(images/services/digitization.jpg)',
+        backgroundRepeat: 'no-repeat',
+        objectFit: 'cover'
+      }}>
         {
           services.map((service, idx) => {
             return (
               <Fragment key={idx}>
-                <Grid container direction={idx % 2 == 0 ? 'row' : 'row-reverse'} spacing={4} alignItems={'center'}>
+                <Grid container
+                  size={{ mobile: 12, tablet: 4, }}
+                  direction={'column'}
+                  spacing={4}
+                  alignItems={'center'}
+                  justifyContent={'center'}
+                  sx={{
+                    boxShadow: '0 0 1px 0',
+                    backdropFilter: 'blur(10px)',
+                    borderRadius: '10px'
+                  }}
+                >
                   <Grid size={{ mobile: 5, tablet: 5, }}>
                     <Stack alignItems={'center'}>
                       <Box
@@ -66,13 +86,13 @@ const ServicePage = () => {
                         src={service.img_src}
                         sx={{
                           objectFit: 'cover',
-                          width: '30%',
+                          width: '50%',
                           height: '90%'
                         }}
                       />
                     </Stack>
                   </Grid>
-                  <Grid size={{ mobile: 12, tablet: 12, laptop: 7 }}>
+                  <Grid size={{ mobile: 12, tablet: 12, laptop: 10 }}>
                     <Typography variant='h3'>
                       {service.title}
                     </Typography>
