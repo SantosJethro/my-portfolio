@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Box, Stack, Typography, Grid2 as Grid, Card, } from '@mui/material';
+import { Box, Stack, Typography, Grid2 as Grid, } from '@mui/material';
 
 const services = [
   {
@@ -59,9 +59,9 @@ const ServicePage = () => {
   return (
     <Fragment>
       <Grid container justifyContent={'center'} spacing={2} sx={{
-        backgroundImage: 'url(images/services/digitization.jpg)',
-        backgroundRepeat: 'no-repeat',
-        objectFit: 'cover'
+        // backgroundImage: 'url(images/services/digitization.jpg)',
+        // backgroundRepeat: 'no-repeat',
+        // objectFit: 'cover'
       }}>
         {
           services.map((service, idx) => {
@@ -70,12 +70,12 @@ const ServicePage = () => {
                 <Grid container
                   size={{ mobile: 12, tablet: 4, }}
                   direction={'column'}
-                  spacing={4}
+                  spacing={5}
                   alignItems={'center'}
                   justifyContent={'center'}
                   sx={{
-                    boxShadow: '0 0 1px 0',
-                    backdropFilter: 'blur(10px)',
+                    boxShadow: '3px 3px 20px 1px rgba(181,181,181,0.75)',
+                    // backdropFilter: 'blur(10px)',
                     borderRadius: '10px'
                   }}
                 >
